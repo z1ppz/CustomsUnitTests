@@ -1,0 +1,17 @@
+c:\dev\seph_koduppgift\seph_koduppgift\bin\Debug\seph_koduppgift.exe.config
+c:\dev\seph_koduppgift\seph_koduppgift\bin\Debug\xunit.abstractions.dll
+c:\dev\seph_koduppgift\seph_koduppgift\bin\Debug\xunit.runner.visualstudio.testadapter.dll
+c:\dev\seph_koduppgift\seph_koduppgift\bin\Debug\xunit.runner.utility.desktop.dll
+c:\dev\seph_koduppgift\seph_koduppgift\bin\Debug\seph_koduppgift.exe
+c:\dev\seph_koduppgift\seph_koduppgift\bin\Debug\seph_koduppgift.pdb
+c:\dev\seph_koduppgift\seph_koduppgift\bin\Debug\xunit.assert.dll
+c:\dev\seph_koduppgift\seph_koduppgift\bin\Debug\xunit.core.dll
+c:\dev\seph_koduppgift\seph_koduppgift\bin\Debug\xunit.execution.desktop.dll
+c:\dev\seph_koduppgift\seph_koduppgift\bin\Debug\xunit.assert.pdb
+c:\dev\seph_koduppgift\seph_koduppgift\bin\Debug\xunit.assert.xml
+c:\dev\seph_koduppgift\seph_koduppgift\bin\Debug\xunit.core.pdb
+c:\dev\seph_koduppgift\seph_koduppgift\bin\Debug\xunit.core.xml
+c:\dev\seph_koduppgift\seph_koduppgift\bin\Debug\xunit.execution.desktop.pdb
+c:\dev\seph_koduppgift\seph_koduppgift\bin\Debug\xunit.execution.desktop.xml
+c:\dev\seph_koduppgift\seph_koduppgift\obj\Debug\seph_koduppgift.exe
+c:\dev\seph_koduppgift\seph_koduppgift\obj\Debug\seph_koduppgift.pdb
