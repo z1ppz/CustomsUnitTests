@@ -4,6 +4,7 @@ using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static System.Console;
 
 namespace seph_koduppgift.Koduppgift
 {
@@ -53,9 +54,9 @@ namespace seph_koduppgift.Koduppgift
             if (result == true)
             {
                 Price = 0;
-                Console.WriteLine("Price will be: {0}", Price);
-                Console.WriteLine("Welcome to Håkan Hällström landet!");
-                Console.ReadKey();
+                WriteLine("Price will be: {0}", Price);
+                WriteLine("Welcome to Håkan Hällström landet!");
+                ReadKey();
             }
             Eco = result;
             return result;
@@ -68,26 +69,29 @@ namespace seph_koduppgift.Koduppgift
                 if (answer == "1")
                 {
                     Today();
-                    Console.WriteLine("The price will be {0}", Price);
+                    WriteLine("The price will be {0}", Price);
+                    WriteLine("Welcome to Håkan Hällström landet!");
                 }
                 else if (answer == "3")
                 {
                     Price = Price * 0.7;
                     Today();
-                    Console.WriteLine("The price will be: {0}", Price);
+                    WriteLine("The price will be: {0}", Price);
+                    WriteLine("Welcome to Håkan Hällström landet!");
                 }
                 else if (answer == "2")
                 {
                     Price = 2000;
                     Today();
-                    Console.WriteLine("The price will be: {0}", Price);
+                    WriteLine("The price will be: {0}", Price);
+                    WriteLine("Welcome to Håkan Hällström landet!");
                 }
                 switch (answer)
                 {
                     case "1": return Convert.ToString(VehicleType.PB);
                     case "2": return Convert.ToString(VehicleType.LB);
                     case "3": return Convert.ToString(VehicleType.MC);
-                    default: Console.WriteLine("Invalid selection. Please select 1, 2, or 3."); break;
+                    default: WriteLine("Invalid selection. Please select 1, 2, or 3."); break;
                 }
             }
             return answer;
@@ -119,31 +123,16 @@ namespace seph_koduppgift.Koduppgift
             holidays.Add(new Holidays() { Day = "Juldagen", Date = new DateTime(localDate.Year, 12, 25) });
             holidays.Add(new Holidays() { Day = "Annandag jul", Date = new DateTime(localDate.Year, 12, 26) });
 
-            var redDay = holidays?.Where(x => x.Date.DayOfYear.Equals(localDate.DayOfYear)).FirstOrDefault();
+            var redDay = holidays.Where(x => x.Date.DayOfYear.Equals(localDate.DayOfYear))?.FirstOrDefault();
 
-            if (localDate.Hour >= 18)
-                if (localDate.DayOfWeek == DayOfWeek.Saturday)
-                    Price = Price * 1;
-                else if (localDate.DayOfWeek == DayOfWeek.Sunday)
+            if (localDate.Hour >= 18 || localDate.Hour <= 06)
+                if (localDate.DayOfWeek == DayOfWeek.Saturday || localDate.DayOfWeek == DayOfWeek.Sunday)
                     Price = Price * 1;
                 else if (localDate.DayOfYear.Equals(redDay?.Date.DayOfYear))
                     Price = Price * 2;
                 else
                     Price = Price / 2;
-            else if (localDate.Hour <= 06)
-                if (localDate.DayOfWeek == DayOfWeek.Saturday)
-                    Price = Price * 1;
-                else if (localDate.DayOfWeek == DayOfWeek.Sunday)
-                    Price = Price * 1;
-                else if (localDate.DayOfYear.Equals(redDay?.Date.DayOfYear))
-                    Price = Price * 2;
-                else
-                    Price = Price / 2;
-            else if (localDate.DayOfWeek == DayOfWeek.Saturday)
-                Price = Price * 2;
-            else if (localDate.DayOfWeek == DayOfWeek.Sunday)
-                Price = Price * 2;
-            else if (localDate.DayOfYear.Equals(redDay?.Date.DayOfYear))
+            else if (localDate.DayOfWeek == DayOfWeek.Saturday || localDate.DayOfWeek == DayOfWeek.Sunday || localDate.DayOfYear.Equals(redDay?.Date.DayOfYear))
                 Price = Price * 2;
         }
     }

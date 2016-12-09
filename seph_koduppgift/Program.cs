@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using seph_koduppgift.Koduppgift;
+using static System.Console;
 
 namespace seph_koduppgift
 {
@@ -17,21 +18,24 @@ namespace seph_koduppgift
 
             Logic logic = new Logic();
 
-            Console.WriteLine("Welcome to Tullen");
-            Console.WriteLine("Please answer with an 'e' and press 'enter' if the Vehicle is ECO");
-            Console.WriteLine("Else press any key to continue");
-            eco = logic.IsVehicleEco(Console.ReadLine());
+            WriteLine("Welcome to Tullen");
+            WriteLine("Please answer with an 'e' and press 'enter' if the Vehicle is ECO");
+            WriteLine("Else press any key to continue");
+            eco = logic.IsVehicleEco(ReadLine());
             if (eco == false)
             {
-                Console.WriteLine("Please enter the Weight of the Vehicle");
-                weight = logic.IsVehicleHeavy(Convert.ToDouble(Console.ReadLine()));
-
-                Console.WriteLine("What kind of Vehicle is it?");
-                Console.WriteLine("1 for PB, 2 for LB, 3 for MC");
-                vehicleType = logic.IsVehicleType(Console.ReadLine());
+                try
+                {
+                    WriteLine("Please enter the Weight of the Vehicle");
+                    weight = logic.IsVehicleHeavy(Convert.ToDouble(ReadLine()));
+                }
+                catch { FormatException e;/* if (e != null) { } */ }
+                WriteLine("What kind of Vehicle is it?");
+                WriteLine("1 for PB, 2 for LB, 3 for MC");
+                vehicleType = logic.IsVehicleType(ReadLine());
             }
 
-            Console.ReadKey();
+            ReadKey();
         }
     }
 }

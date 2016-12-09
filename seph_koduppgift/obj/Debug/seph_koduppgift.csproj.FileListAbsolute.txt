@@ -15,3 +15,4 @@ c:\dev\seph_koduppgift\seph_koduppgift\bin\Debug\xunit.execution.desktop.pdb
 c:\dev\seph_koduppgift\seph_koduppgift\bin\Debug\xunit.execution.desktop.xml
 c:\dev\seph_koduppgift\seph_koduppgift\obj\Debug\seph_koduppgift.exe
 c:\dev\seph_koduppgift\seph_koduppgift\obj\Debug\seph_koduppgift.pdb
+C:\dev\seph_koduppgift\seph_koduppgift\obj\Debug\seph_koduppgift.csprojResolveAssemblyReference.cache
