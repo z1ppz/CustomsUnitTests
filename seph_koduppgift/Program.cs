@@ -29,7 +29,7 @@ namespace seph_koduppgift
                     WriteLine("Please enter the Weight of the Vehicle");
                     weight = logic.IsVehicleHeavy(Convert.ToDouble(ReadLine()));
                 }
-                catch { FormatException e;/* if (e != null) { } */ }
+                catch { }
                 WriteLine("What kind of Vehicle is it?");
                 WriteLine("1 for PB, 2 for LB, 3 for MC");
                 vehicleType = logic.IsVehicleType(ReadLine());
