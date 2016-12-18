@@ -21,20 +21,28 @@ namespace seph_koduppgift
             WriteLine("Welcome to Tullen");
             WriteLine("Please answer with an 'e' and press 'enter' if the Vehicle is ECO");
             WriteLine("Else press any key to continue");
-            eco = logic.IsVehicleEco(ReadLine());
-            if (eco == false)
+            try
             {
-                try
+                eco = logic.IsVehicleEco(ReadLine());
+                if (eco == false)
                 {
-                    WriteLine("Please enter the Weight of the Vehicle");
-                    weight = logic.IsVehicleHeavy(Convert.ToDouble(ReadLine()));
-                }
-                catch { }
-                WriteLine("What kind of Vehicle is it?");
-                WriteLine("1 for PB, 2 for LB, 3 for MC");
-                vehicleType = logic.IsVehicleType(ReadLine());
-            }
 
+                    WriteLine("Please enter the Weight of the Vehicle");
+                    try
+                    {
+                        weight = logic.IsVehicleHeavy(Convert.ToDouble(ReadLine()));
+                    }
+                    catch { }
+                    WriteLine("What kind of Vehicle is it?");
+                    WriteLine("1 for PB, 2 for LB, 3 for MC");
+                    try
+                    {
+                        vehicleType = logic.IsVehicleType(ReadLine());
+                    }
+                    catch { }
+                }
+            }
+            catch { }
             ReadKey();
         }
     }
